@@ -1,0 +1,17 @@
+{% extends "site/base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block header_title %}
+  {% trans "Events" %}
+{% endblock %}
+
+{% block media %}
+{{ block.super }}
+<script type="text/javascript" src="{% static "js/jquery/jquery-1.7.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/eventbrite/Eventbrite.jquery.js" %}"></script>
+<script type="text/javascript" src="{% static "js/eventbrite/iso8601.js" %}"></script>
+<script type="text/javascript" src="{% static "js/eventbrite/basic_search_api.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/events.css" %}">
+{% endblock %}
+
