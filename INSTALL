@@ -38,7 +38,11 @@ delete it without first backing up the share/localwiki directory inside it.
 
 3.  Install the localwiki package and its dependencies:
 
-	(env)$ python setup.py install
+    (env)$ git clone git://github.com/localwiki/localwiki.git
+
+    (env)$ cd localwiki/
+
+    (env)$ python setup.py install
 
 4.  Allow the search, diff services to start & back up existing config.  This will
 differ between systems.  We use this setup_jetty.sh script on Ubuntu systems:
@@ -50,7 +54,7 @@ customize it for your particular OS.
 
 5. Initialize the localwiki install:
 
-	(env)$ localwiki-manage setup_all
+    (env)$ localwiki-manage setup_all
 
 You'll be asked to sudo in order to create the postgres database.
 
