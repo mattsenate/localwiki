@@ -10,8 +10,10 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, function(eb){
     // define a few parameters to pass to the API
     // Options are listed here: http://developer.eventbrite.com/doc/events/event_search/
     var options = {
-        'city'  : "Oakland"
-       ,'region': "CA"
+        'city'   : "Oakland"
+       ,'region' : "CA"
+       ,'sort_by': "date"
+       ,'max'    : "50"
     };
     
     // provide a callback to display the response data:
