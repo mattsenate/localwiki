@@ -1,6 +1,8 @@
 /*
     Eventbrite Examples - event_search
 
+    http://developer.eventbrite.com/doc/events/event_search/
+
     If you copy this code, please set your own API Key in the example below.
     You can request one here: http://www.eventbrite.com/api/key
 */
