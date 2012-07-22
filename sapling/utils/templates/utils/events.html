@@ -12,6 +12,12 @@
 <script type="text/javascript" src="{% static "js/eventbrite/Eventbrite.jquery.js" %}"></script>
 <script type="text/javascript" src="{% static "js/eventbrite/iso8601.js" %}"></script>
 <script type="text/javascript" src="{% static "js/eventbrite/basic_search_api.js" %}"></script>
-<link rel="stylesheet" href="{% static "css/events.css" %}">
+<link rel="stylesheet" href="{% static "css/events/eventbrite.css" %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="event_list"><a href="http://eventbrite.com">Loading Events...</a></div>
+
 {% endblock %}
 

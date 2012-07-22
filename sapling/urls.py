@@ -5,10 +5,14 @@ from django.conf.urls.static import static
 from django.views.generic.simple import redirect_to
 from django.contrib.admin.views.decorators import staff_member_required
 
+# imported for events
+from django.views.generic.simple import direct_to_template
+
 import pages
 import maps
 import redirects
 import dashboard
+import utils
 from users.admin import SubscribedList
 
 admin.autodiscover()
@@ -22,6 +26,9 @@ urlpatterns = patterns('',
     (r'^search/', include('sapling.search.urls')),
     (r'^', include('sapling.recentchanges.urls')),
     (r'^tools/', include(dashboard.site.urls)),
+#    (r'^events', include(utils.urls)),
+    (r'^events', direct_to_template, {'template': 'utils/events.html'}),
+
 
     # JS i18n support.
     (r'^jsi18n/(?P<packages>\S+?)/$', 'django.views.i18n.javascript_catalog'),
